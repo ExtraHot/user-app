@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  postgres_db:
+    container_name: vk_postgres_container
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5432:5432"
+  
+  vk-testing:
+    container_name: vk_service_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - "postgres_db"
+    links:
+      - "postgres_db:database"
+    ports:
+      - "5000:5000"
+    environment:
+      DB_CONNECTION_STRING: "User ID=postgres;Password=root;Host=host.docker.internal;Port=5432;Database=postgres;"
