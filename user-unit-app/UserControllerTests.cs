@@ -5,8 +5,7 @@ using user_app.Dtos;
 using user_app.Models;
 using user_app.Services.Interfaces;
 
-namespace user_unit_app.obj;
-
+namespace user_unit_app;
 
 public class UserControllerTests
 {
