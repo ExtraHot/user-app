@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include="obj\UserControllerTests.cs" />
+      <Compile Include="\UserControllerTests.cs" />
     </ItemGroup>
 
     <ItemGroup>
