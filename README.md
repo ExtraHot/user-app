@@ -1,23 +1,36 @@
-# User-Service
+<p>
+    <h1 align="center">User-Service</h1>
+</p>
 
-### Интро
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=&message=c%23&style=flat-square&color=0000ff"
+      height="40">
+  <img src="https://img.shields.io/badge/ASP.NET-purple?style=flat-square"
+      height="40">
+  <img src="https://img.shields.io/static/v1?label=&message=Entity-Framework&style=flat-square&color=blueviolet"
+      height="40">
+  <img src="https://img.shields.io/static/v1?label=&message=PostgreSql&style=flat-square&color=1A5276&logo=postgresql&logoColor=white"
+      height="40">
+  <img src="https://img.shields.io/static/v1?label=&message=Swagger&style=flat-square&color=green&logo=swagger&logoColor=white"
+      height="40">
+  <img src="https://img.shields.io/static/v1?label=&message=Docker&style=flat-square&color=blue"
+      height="40">
+ 
+</p>
+
+# Интро
 
 Данный проект был реализован с помощью следующих технологий:
 - C# и фреймворк ASP .NET 7.0
 - Entity Framework для ORM
 - Для хранения данных использовался PostgreSQL
-- Для контениризации использовался Docker
+- Для контейнеризации использовался Docker
 - Раскат CI / CD на Github Acions
 
-Cхема базы данных находится в корневой папке проекта и называется user-scheme.png
+**Cхема базы данных:**
+![image](user-scheme.png)
 
 В целевом решении надо использовать переменные окружения для Github Actions и использовать Vault для хранения всех паролей и других чувствительных данных, но я решил упростить все это, но по-хорошему нельзя постить вот так данные в репозиторий.
-
-
-### Информация по запуску
-
-Для того, чтобы поднять докер контейнер с PostgreSQL и самим сервисов введите в корне проекта:
-docker-compose up
 
 # Задача
 
@@ -43,3 +56,14 @@ docker-compose up
 - [X] В качестве способа авторизации следует использовать Basic-авторизацию.
 - [X] Реализовать пагинацию для получения нескольких пользователей.
 - [X] Написать unit-тесты с помощью xUnit.
+
+# Локальный запуск
+- ```git clone https://github.com/ExtraHot/user-app.git```
+
+- ```cd user-app```
+
+- ```docker-compose build```
+
+- ```docker-compose up```
+
+
